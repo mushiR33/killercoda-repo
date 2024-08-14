@@ -1,0 +1,52 @@
+{
+  "title": "WSO2 API Manager Control Plane and WSO2 APK",
+  "description": "Running WSO2 API Manager Control Plane and WSO2 APK",
+  "difficulty": "Beginner",
+  "time": "1 hour",
+  "details": {
+    "intro":{
+      "text" : "intro/intro.md",
+      "foreground": "intro/foreground.sh",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Prepare the k8s cluster",
+        "text": "step1.md"
+      },
+      {
+        "title": "Setup APIM Control Plane with APK",
+        "text": "step2.md"
+      },
+      {
+        "title": "Setup WSO2 API Manager Control Plane 4.3.0",
+        "text": "step3.md"
+      },
+      {
+        "title": "Setup WSO2 APK Dataplane 1.1.0",
+        "text": "step4-new.md"
+      },
+      {
+        "title": "Setup WSO2 APIM-APK Agent 1.1.0",
+        "text": "step5-new.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "sb-deployment.yaml", "target": "~/", "chmod": "+w"},
+        {"file": "values.yaml", "target": "~/", "chmod": "+w"},
+        {"file": "sb-api.yaml", "target": "~/", "chmod": "+w"}
+      ]
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
